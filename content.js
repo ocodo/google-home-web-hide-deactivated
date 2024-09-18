@@ -15,7 +15,7 @@ hideDeactivatedCards()
 
 const observer = new MutationObserver(observe)
 
-observer.observe(document.body), {
+observer.observe(document.body, {
     childList: true,
     subtree: true
 })
