@@ -5,6 +5,13 @@ function hideDeactivatedCards() {
             card.style.display = 'none';
         }
     });
+
+    removeFakeAddButton()
+}
+
+function removeFakeAddButton() {
+    const fakeButton = Array.from(document.querySelectorAll('mat-toolbar .group'))[3]
+    if (fakeButton) fakeButton.style.display = 'none'
 }
 
 function observe(mutation) {
