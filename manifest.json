@@ -1,0 +1,15 @@
+{
+  "manifest_version": 3,
+  "name": "google-home-web-hide-deactivated",
+  "version": "1.0.0",
+  "description": "In Google Home Web, this extension hides deactivated automations",
+  "author": "Jason Milkins",
+  "permissions": ["activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://home.google.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
+
