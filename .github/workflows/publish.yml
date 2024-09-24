@@ -19,7 +19,7 @@ jobs:
       uses: wdzeng/firefox-addon@v1
       with:
         addon-guid: "jasonm23_google-home-web-hide-deactivated@gmail.com"
-        xpi-path: google-home-web-hide-deactivated.zip
+        xpi-path: google-home-hide-deactivated.zip
         self-hosted: false
         jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
         jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
