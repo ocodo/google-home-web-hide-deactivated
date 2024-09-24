@@ -1,0 +1,25 @@
+name: Publish to Add-ons
+
+on:
+  push:
+    branches: [ "master" ]
+    
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Package Add-on
+      run: |
+        make
+
+    - name: Publish
+      uses: wdzeng/firefox-addon@v1
+      with:
+        addon-guid: "jasonm23_google-home-web-hide-deactivated@gmail.com"
+        xpi-path: google-home-web-hide-deactivated.zip
+        self-hosted: false
+        jwt-issuer: ${{ secrets.FIREFOX_JWT_ISSUER }}
+        jwt-secret: ${{ secrets.FIREFOX_JWT_SECRET }}
