@@ -1,13 +1,14 @@
 {
   "manifest_version": 3,
   "name": "google-home-web-hide-deactivated",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "In Google Home Web, this extension hides deactivated automations and the redundant fake 'Add +' button.  Localized for English and Czech.",
   "author": "Jason Milkins",
   "browser_specific_settings": {
     "gecko": {
       "id": "jasonm23_google-home-web-hide-deactivated@gmail.com"
-    }
+    },
+    "gecko_android": {}
   },
   "permissions": ["activeTab"],
   "content_scripts": [
