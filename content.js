@@ -1,7 +1,12 @@
+const deactivatedTerms = [
+    'Deactivated',
+    'Deaktivováno'
+];
+
 function hideDeactivatedCards() {
     document.querySelectorAll('mat-card').forEach(card => {
-        const description = card.querySelector('.description');
-        if (description && description.textContent.includes('Deactivated ')) {
+        const description = card.querySelector('.description')?.textContent;
+        if (description && deactivatedTerms.some(term => description.startsWith(term))) {
             card.style.display = 'none';
         }
     });
