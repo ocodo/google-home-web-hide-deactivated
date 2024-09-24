@@ -7,7 +7,8 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "jasonm23_google-home-web-hide-deactivated@gmail.com"
-    }
+    },
+    "gecko_android": {}
   },
   "permissions": ["activeTab"],
   "content_scripts": [
